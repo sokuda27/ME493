@@ -16,4 +16,4 @@
 <h3> Looking at eigenvalue vs mode index </h3>
 <p> After setting up and computing the SVD using the MATLAB functon, we are given the $\Sigma$. Below, $\Sigma^2$ is plotted against mode number. The values plateau after modes 150 and 220, for Ux and Uy respectively. Cutting off the rank much earlier will still reconstruct a decently accurate representation of matrix $A$. </p>
 
-<img src="1 - POD Analysis/eigval-vs-mode.jpg">
+<img src="eigval-vs-mode.jpg">
