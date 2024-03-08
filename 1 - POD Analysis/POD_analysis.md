@@ -4,4 +4,4 @@
 
 <h2> Analysis of Dataset </h2>
 <h3> Looking at eigenvalue vs mode index </h3>
-<p> After setting up and computing the SVD using the MATLAB functon, we are given the ${\sigma} 
+<p> After setting up and computing the SVD using the MATLAB functon, we are given the $\sigma$
