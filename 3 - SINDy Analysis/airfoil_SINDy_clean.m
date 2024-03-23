@@ -45,19 +45,14 @@ uy = h5read(filename,'/uy'); % transverse velocity
 X = reshape(ux, nx*ny, nt);
 Y = reshape(uy, nx*ny, nt);
 
-mean_ux = mean(X,1);
-mean_uy = mean(Y,1);
+meanSub = 1;
 
-corr_ux = zeros(nx*ny,nt);
-corr_uy = zeros(nx*ny,nt);
-
-for i = 1:length(mean_uy)
-    corr_ux(:,i) = X(:,i) - mean_ux(1, i);
-    corr_uy(:,i) = Y(:,i) - mean_uy(1, i);
+if meanSub
+    XMean = mean(X, 2);
+    YMean = mean(Y, 2);
+    X = X - XMean * ones(1, nt);
+    Y = Y - YMean * ones(1, nt);
 end
-
-X = corr_ux;
-Y = corr_uy;
 
 [Ux,Sx,Vx] = svd(X,"econ");
 [Uy,Sy,Vy] = svd(Y,"econ");

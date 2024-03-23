@@ -28,14 +28,14 @@ Y = reshape(uy, nx*ny, []);
 
 stacked = [X;Y];
 
-corr_stacked = zeros(nx*ny*2,[]);
-mean = mean(stacked,1);
+meanSub = 1;
 
-for i = 1:length(mean)
-    corr_stacked(:,i) = stacked(:,i) - mean(1, i);
+if meanSub
+    Mean = mean(stacked, 2);
+    stacked = stacked - Mean * ones(1, nt);
 end
 
-[U,S,V] = svd(corr_stacked, "econ");
+[U,S,V] = svd(stacked, "econ");
 
 %% 
 
@@ -197,14 +197,14 @@ contourf(x,y,ux_1,15,"LineWidth",0.1)
 title('Original')
 
 subplot(2,2,2);
-contourf(x,y,recon2x(:,:,t)',15,"LineWidth",0.1)
+contourf(x,y,recon2y(:,:,t)',15,"LineWidth",0.1)
 title('r = 2')
 
 subplot(2,2,3);
-contourf(x,y,recon4x(:,:,t)',15,"LineWidth",0.1)
+contourf(x,y,recon4y(:,:,t)',15,"LineWidth",0.1)
 title('r = 4')
 
 subplot(2,2,4);
-contourf(x,y,recon6x(:,:,t)',15,"LineWidth",0.1)
+contourf(x,y,recon6y(:,:,t)',15,"LineWidth",0.1)
 title('r = 6')
 

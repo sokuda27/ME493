@@ -42,37 +42,20 @@ nt = length(t_field);
 ux = h5read(filename,'/ux'); % streamwise velocity
 uy = h5read(filename,'/uy'); % transverse velocity
 
-mean_ux = mean(ux,[1 2]);
-mean_uy = mean(uy,[1 2]);
+X = reshape(ux, nx*ny, nt);
+Y = reshape(uy, nx*ny, nt);
 
-corr_ux = zeros(nx,ny,nt);
-corr_uy = zeros(nx,ny,nt);
+meanSub = 1;
 
-for i = 1:length(mean_uy)
-    corr_ux(:,:,i) = ux(:,:,i) - mean_ux(1, 1, i);
-    corr_uy(:,:,i) = uy(:,:,i) - mean_uy(1, 1, i);
+if meanSub
+    XMean = mean(X, 2);
+    YMean = mean(Y, 2);
+    X = X - XMean * ones(1, nt);
+    Y = Y - YMean * ones(1, nt);
 end
-
-X = reshape(corr_ux, nx*ny, nt);
-Y = reshape(corr_uy, nx*ny, nt);
-% X = reshape(ux, nx*ny, nt);
-% Y = reshape(uy, nx*ny, nt);
 
 [Ux,Sx,Vx] = svd(X,"econ");
 [Uy,Sy,Vy] = svd(Y,"econ");
-
-%% 
-% A = [ux; uy];
-% 
-% corr_A = zeros(2*nx,ny,nt);
-% mean_A = mean(A,[1 2]);
-% 
-% for i = 1:length(mean_A)
-%     corr_A(:,:,i) = A(:,:,i) - mean_A(1, 1, i);
-% end
-% 
-% corr_A = reshape(corr_A, nx*2*ny, []);
-% [U, S, V] = svd(corr_A, "econ");
 
 %% Sigma Vals
 
@@ -213,7 +196,7 @@ recon2 = reshape(recon2,nx,ny,nt);
 recon2 = transpose(recon2(:,:,t));
 
 for i = 1:length(nt)
-    recon2(:,:,i) = recon2(:,:,i) + mean_ux(1, 1, i);
+    recon2(:,:,i) = recon2(:,:,i) + XMean(1, 1, i);
 end
 
 U4 = Ux(:,1:4);
@@ -225,7 +208,7 @@ recon4 = reshape(recon4,nx,ny,nt);
 recon4 = transpose(recon4(:,:,t));
 
 for i = 1:length(nt)
-    recon4(:,:,i) = recon4(:,:,i) + mean_ux(1, 1, i);
+    recon4(:,:,i) = recon4(:,:,i) + XMean(1, 1, i);
 end
 
 U6 = Ux(:,1:6);
@@ -237,7 +220,7 @@ recon6 = reshape(recon6,nx,ny,nt);
 recon6 = transpose(recon6(:,:,t));
 
 for i = 1:length(nt)
-    recon6(:,:,i) = recon6(:,:,i) + mean_ux(1, 1, i);
+    recon6(:,:,i) = recon6(:,:,i) + XMean(1, 1, i);
 end
 
 ux_1 = transpose(ux(:,:,t));

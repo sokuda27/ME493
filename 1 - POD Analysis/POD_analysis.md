@@ -12,9 +12,23 @@
 </ol>
 
 <h2> Analysis of Dataset </h2>
-<h3> Looking at eigenvalue vs mode index </h3>
+<h3> Eigenvalue vs Mode Index </h3>
 <p> After setting up and computing the SVD using the MATLAB functon, we are given the $\Sigma$. Below, $\Sigma^2$ is plotted against mode number. The values plateau after modes 150 and 220, for Ux and Uy respectively. Cutting off the rank much earlier will still reconstruct a decently accurate representation of matrix $A$. </p>
 
-<img src="eigval-vs-mode.jpg">
+<img src="images/eigval-vs-mode.jpg">
 
 <h3> Temporal Amplitudes </h3>
+<p> The SVD function also gives us $V$, which, when multiplied with the $S$ matrix, yields the temporal amplitudes of the dataset. The temporl amplitudes describe, roughly, the distribution of energy (how active(?) the system is) across time(?). Because the data has been mean corrected, the average of these sinusoidal waves should be zero, as it is measuring the energy fluctuations. </p>
+
+<img src="images/temp_amps_stacked.jpg">
+<em>First Six Temporal Amplitudes of a Stacked Matrix</em>
+<img src="images/temp_amps_ux.jpg">
+<em>First Six Temporal Amplitudes of Ux</em>
+
+<h3> Spatial Modes </h3>
+<p> The remaining $U$ matrix shows the energy distributions (?) of the dataset spatially. The oscillatory patterns are pretty notable, and they indicate the fluctuations of the actual wake.</p>
+
+<img src="images/spatial_modes.jpg">
+<em>First Six Spatial Modes</em>
+<img src="images/spatial_modes_ux.jpg">
+<em>First Six Spatial Modes of Ux</em>
