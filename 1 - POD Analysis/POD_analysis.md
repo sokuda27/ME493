@@ -20,15 +20,15 @@
 <h3> Temporal Amplitudes </h3>
 <p> The SVD function also gives us $V$, which, when multiplied with the $S$ matrix, yields the temporal amplitudes of the dataset. The temporl amplitudes describe, roughly, the distribution of energy (how active(?) the system is) across time(?). Because the data has been mean corrected, the average of these sinusoidal waves should be zero, as it is measuring the energy fluctuations. </p>
 
-<img src="images/temp_amps_stacked.jpg">
 <em>First Six Temporal Amplitudes of a Stacked Matrix</em>
-<img src="images/temp_amps_ux.jpg">
+<img src="images/temp_amps_stacked.jpg">
 <em>First Six Temporal Amplitudes of Ux</em>
+<img src="images/temp_amps_ux.jpg">
 
 <h3> Spatial Modes </h3>
 <p> The remaining $U$ matrix shows the energy distributions (?) of the dataset spatially. The oscillatory patterns are pretty notable, and they indicate the fluctuations of the actual wake.</p>
 
-<img src="images/spatial_modes.jpg">
 <em>First Six Spatial Modes</em>
-<img src="images/spatial_modes_ux.jpg">
+<img src="images/spatial_modes.jpg">
 <em>First Six Spatial Modes of Ux</em>
+<img src="images/spatial_modes_ux.jpg">
