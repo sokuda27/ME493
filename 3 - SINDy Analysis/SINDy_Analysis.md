@@ -8,7 +8,7 @@ the details are lost on me. the order and number of variables of the polynomial 
 <p> For this example, the temporal amplitudes from the POD analysis will be pushed through SINDy, and the SINDy approximation for the curves will be compared to the POD plots.
 <ol>
 <li> Find or import the temporal amplitudes from POD. 
-<li> Find the approximate (finite?) derivative using $\Deltax/\Deltat = (x_k+1-x_k)/\Deltat$
+<li> Find the approximate (finite?) derivative using $\Delta x/\Delta t = (x_(k+1)-x_k)/\Delta t$
 <li> Set n (number of variables), the order of the polynomial, and lambda, the sparsification knob (which determined how aggressively SINDy fits the data). 
 <li> $\Theta$ is the list of combinations of variables. $\Xi$ (Xi) is a matrix of the coefficients. $\Theta\Xi$ gives us a derivative(?) we can integrate using trapezoids to get the original function.
 <li> Because we took discrete time derivative, we lose a value. To get around this, just drop the last POD temporal amplitude and time field value. Plot the POD amplitudes(blue) and the SINDy approximation (red).
