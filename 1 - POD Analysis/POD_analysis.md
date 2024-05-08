@@ -26,7 +26,7 @@
 <img src="images/temp_amps_ux.jpg">
 
 <h3> Spatial Modes </h3>
-<p> The remaining $U$ matrix shows the energy distributions (?) of the dataset spatially. The oscillatory patterns are pretty notable, and they indicate the fluctuations of the actual wake.</p>
+<p> The remaining $U$ matrix shows the energy distributions of the dataset spatially. The oscillatory patterns are pretty notable, and they indicate the fluctuations of the actual wake.</p>
 
 <em>First Six Spatial Modes</em>
 <img src="images/spatial_modes.jpg">
