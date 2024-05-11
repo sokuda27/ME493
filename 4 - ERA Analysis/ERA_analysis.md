@@ -5,9 +5,19 @@
 
 <h3> Method </h3>
 <ol>
-    <li> Hankel Matrix.
-    <ul id="ind">
-        <li> $\begin{align}\label{Eq: Hankel matrix k}$
+    <li> State space of form $y = Ax + Bu$
+    <li> Hankel Matrix, starting with $y_0$ in the first entry.
+        <ul id="ind">
+            <li> <img src="images/hnkl.png">
+        </ul>
+    <li> Shifted Hankel Matrix, H_2, where entries are shifted by one.
+    <li> Trim Hankel Matrices to get rid of null entries, or to a value $k$.
+    <li> Perform SVD on unshifted Hankel matrix.
+    <li> Reduce SVD variables to rank $r$, to output $S_r$, $U_r$, and $V_r$.
+    <li> Find $A_r$, $B_r$, $C_r$, and $D_r$ of state space form.
+        <ul id="ind">
+            <li> $A_r = \Sigma^{\frac {-1}{2}} U_r' H_2 V_r \Sigma^{\frac {-1}{2}}$
+        </ul>   
             
 </ol>
 
