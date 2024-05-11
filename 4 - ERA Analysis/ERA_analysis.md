@@ -7,9 +7,7 @@
 <ol>
     <li> State space of form $y = Ax + Bu$
     <li> Hankel Matrix, starting with $y_0$ in the first entry.
-        <ul id="ind">
-            <li> <img src="images/hnkl.png">
-        </ul>
+        <img src="images/hnkl.png">
     <li> Shifted Hankel Matrix, H_2, where entries are shifted by one.
     <li> Trim Hankel Matrices to get rid of null entries, or to a value $k$.
     <li> Perform SVD on unshifted Hankel matrix.
