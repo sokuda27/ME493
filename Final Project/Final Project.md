@@ -31,6 +31,7 @@
 </ol>
 
 <h2> Issues </h2>
+<li> <b>Second order approximation:</b> There appears to be some instability in the system that blows up when SINDy attempts to fit a second order approximation. First order is the best fit.
 <li> <b>Smoothing:</b> Because stock proces can heavily differ from day to day, the data was extremely jerky and didn't resemble a smooth curve; since I thought SINDy was robust with noise, I thought it could overcome the somewhat discontinous, discrete nature of the data. However, Prof. Luchtenburg advised that smoothing the data would improve the model. The data was smoothed using a moving average filter of length 5 (taking the average of the data point and two points on either side).
 
 <div class="row">
@@ -39,15 +40,12 @@
         <img src="images/no_smoothing_results.jpg"> <br>
         <img src="images/no_smooth_derivative.jpg"> <br>
     </div>
-    <h3> No Smoothing </h3>
+    <h3> With Smoothing </h3>
     <div class="column">
         <img src="images/smoothing_results.jpg"> <br>
         <img src="images/smooth_derivative.jpg"> <br>
     </div>
 </div>
-
-<br>
-<li> Second order approximation: There appears to be some instability in the system that blows up when SINDy attempts to fit a second order approximation. First order is the best fit.
 
 <br>
 
