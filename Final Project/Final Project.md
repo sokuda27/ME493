@@ -1,22 +1,4 @@
 <html>
-<head>
-<style>
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.column {
-    float: left;
-    width: 50%;
-}
-#ind
-{
- text-indent:50px;
-}
-</style>
-</head>
-
 <h1> Final Project </h1>
 <h2> Objective: </h2>
 <p> To use SINDy to model stock prices. <p>
@@ -88,5 +70,23 @@
         <ul id="ind">
             <li> Allow the data to read only to day 200 (instead of 256, for example). Integrate the derivative signal SINDy gave to further timesteps, and see if the algorithm can accurately predict.
         </ul>
+
+<head>
+<style>
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+#ind
+{
+ text-indent:50px;
+}
+</style>
+</head>
 
 </html>
