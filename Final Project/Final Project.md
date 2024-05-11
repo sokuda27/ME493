@@ -4,11 +4,11 @@
 
 <h2> Method </h2>
 <li>
-    <ol> Collect closing stock prices for the top twenty (or so) companies in the S&P 500 from the past year (or so).
-    <ol> Start with using the first five companies for the model, and set number of variables to three (price, time, company) and polynomial order to 1 (first order approximation).
-    <ol> Find the finite differences with a time step of 1 (day). Find the average of the smoothed data.
-    <ol> Apply SINDy algorithm. 
-    <ol> Integrate SINDy derivative signal for each company and add back the respective mean. Plot.
+    <ol> Collect closing stock prices for the top twenty (or so) companies in the S&P 500 from the past year (or so).</ol>
+    <ol> Start with using the first five companies for the model, and set number of variables to three (price, time, company) and polynomial order to 1 (first order approximation). </ol>
+    <ol> Find the finite differences with a time step of 1 (day). Find the average of the smoothed data.</ol>
+    <ol> Apply SINDy algorithm. </ol>
+    <ol> Integrate SINDy derivative signal for each company and add back the respective mean. Plot.</ol>
 </li>
 
 <h2> Issues
