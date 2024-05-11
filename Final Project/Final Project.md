@@ -1,14 +1,15 @@
 <head>
 <style>
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .column {
-        float: left;
-        width: 50%;
-    }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+</style>
 </head>
 
 <h1> Final Project </h1>
@@ -30,7 +31,7 @@
 <div class="row">
   <div class="column">
     <img src="images/no_smoothing_results.jpg"> <br>
-    <img src="images/no_smoothing_derivative.jpg"> <br>
+    <img src="images/no_smooth_derivative.jpg"> <br>
   </div>
   <div class="column">
     <img src="images/smoothing_results.jpg"> <br>
