@@ -7,15 +7,8 @@
 <ol>
     <li> Hankel Matrix.
     <ul id="ind">
-        <li> $\begin{align}
-            \label{Eq: Hankel matrix k}
-            \boldsymbol{H}_k^{(p, q)} = \begin{bmatrix}
-            h_{k+1} & h_{k+2} & \cdots & h_{k+q}\\
-            h_{k+2} & h_{k+3} & \cdots & h_{k+q+1}\\
-            \vdots & \vdots & \ddots & \vdots\\
-            h_{k+p} & h_{k+p+1} & \cdots & h_{k+p+q-1}\\
-            \end{bmatrix} = \boldsymbol{O}^{(p)}A^{k}\boldsymbol{R}^{(q)}.
-            \end{align}$
+        <li> $\begin{align}\label{Eq: Hankel matrix k}$
+            
 </ol>
 
 <br>
