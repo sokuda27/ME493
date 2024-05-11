@@ -71,6 +71,9 @@
             <li> Allow the data to read only to day 200 (instead of 256, for example). Integrate the derivative signal SINDy gave to further timesteps, and see if the algorithm can accurately predict.
         </ul>
 
+<br>
+<br>
+
 <head>
 <style>
 .row:after {
