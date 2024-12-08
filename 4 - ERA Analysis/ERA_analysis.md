@@ -23,7 +23,7 @@
     <li> Reconstruct state space with $A_r$, $B_r$, $C_r$, and $D_r$
 </ol>
 
-<h3> Example using transfer function </h3>
+<!-- <h3> Example using transfer function </h3>
 
 <head>
 <style>
@@ -41,4 +41,4 @@
  text-indent:50px;
 }
 </style>
-</head>
+</head> -->
