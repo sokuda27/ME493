@@ -23,8 +23,6 @@
     <li> Reconstruct state space with $A_r$, $B_r$, $C_r$, and $D_r$
 </ol>
 
-<br>
-
 <h3> Example using transfer function </h3>
 
 <head>
